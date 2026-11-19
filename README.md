@@ -48,8 +48,13 @@ shared-resource management using Python.
 
 ### Thread Synchronization
 1. Why does the main program wait when join() is used?
+    - join() from threading module blocks the caller or main function until the thread terminates or finishes.
+
 2. What happens when join() is removed?
+    - The caller or main function continues while the thread hasn't finished yet.
+
 3. In what situations is thread synchronization necessary?
+    - If the main function or another thread requires data from a specific thread before the next logic executes, then thread synchronization is a must.
 
 ### Thread Lock
 1. What is a shared resource?
