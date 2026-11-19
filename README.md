@@ -98,3 +98,5 @@ shared-resource management using Python.
     - The kernel knows about each thread and schedules it directly. It keeps a record for each thread (registers, stack, state). It decides which thread runs on which core, saves and loads the thread's state during a context switch, and moves threads between states: ready, running, and waiting. If one thread blocks, the kernel can run another thread of the same process.
 
 ## Image(s)
+
+<img width="1721" height="268" alt="Four tasks" src="https://github.com/user-attachments/assets/736a992d-a7b4-421f-ab6a-0ecea9a78191" />
