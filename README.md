@@ -58,10 +58,19 @@ shared-resource management using Python.
 
 ### Thread Lock
 1. What is a shared resource?
+    - A global variable that is used by multiple distinct functions is considered as a shared resource.
+
 2. What is a race condition?
+    - When multiple tasks updates a shared resource simultaneously without mutex, the data may be malformed.
+
 3. What is the purpose of threading.Lock()?
+    - It initializes locking mechanism such as acquire and release lock. When a code acquires a lock, any other code attempting to acquire the same lock will not be permitted and waits until the original task to release its lock.
+
 4. What is a critical section?
+    - A specific part of a code where it must not be interrupted by another other logic at all cost.
+
 5. Why is synchronization important when multiple threads access shared data?
+    - To prevent any data from updating incorrectly due to race condition where both are supposed to count up, but the other task sees an older data of the shared resource while the other sees a newer version.
 
 ### General Questions
 1. What is the difference between a process and a thread?
