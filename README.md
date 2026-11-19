@@ -35,9 +35,16 @@ shared-resource management using Python.
 
 ### Multiple Threads
 1. How many threads are created in the program?
+    - 2 threads were created in the program, t1 and t2.
+
 2. Do the two threads execute independently?
+    - Yes, both threads are executing independently.
+
 3. Why might the output order change when the program is executed again?
+    - The operating system scheduler determines when threads execute, and does not follow the sequence of written code.
+
 4. What is the difference between sequential and concurrent execution?
+    - Threads that are run sequentially forces other threads to wait for the currently running thread to finish before they can execute, while a concurrent thread execution means that multiple threads are being run simultaneously through switching them quickly with respect to overhead.
 
 ### Thread Synchronization
 1. Why does the main program wait when join() is used?
