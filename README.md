@@ -53,9 +53,17 @@ shared-resource management using Python.
 
 ### General Questions
 1. What is the difference between a process and a thread?
+    - A process is a type of task that is executed, which contains multiple logic, typically called a thread that can be run simultaneously with another thread on the same process or waits for a thread to finish. Every threads' heap memory iniside a process is shared globally within the process.
+
 2. What are the advantages of using multithreading?
+    - A process where its threads can be run independently would be much faster than a process where its thread are dependent to another thread.
+
 3. How does multithreading improve application responsiveness?
+    - For example, a video player that have two threads that are both the video and audio. It would be annoying to watch a video if both threads weren't run concurrently or in parallelism. With multithreading, you would hear the audio and see the video working together simultaneously.
+
 4. What is the difference between concurrency and parallelism?
+    - In terms of computer algorithms, concurrency is defined as tasks being executed in an overlapped time from a single core, acting as multiple tasks being run simultaneously by switching quickly. While parallelism is when tasks are truly run simultaneously by assigning tasks to different cores instead of a single core running both tasks.
+
 5. Why is a lock necessary when multiple threads access shared data?
 6. What might happen if a thread is not properly synchronized?
 7. Can multiple threads execute simultaneously on a single-core processor? Explain.
