@@ -22,9 +22,16 @@ shared-resource management using Python.
 ## Guide Questions
 ### Single Thread
 1. What is the purpose of threading.Thread()?
+    - This is a class constructor, which allows you to configure a thread object.
+
 2. What happens when start() is executed?
+    - It starts a thread object's activity.
+
 3. What is the purpose of join()?
+    - It is used to block the caller while the thread is executing. When the thread finishes executing, the caller can then resume.
+
 4. What happens if join() is removed?
+    - If a thread object is non-daemon, then a finishes main thread simply waits for the other remaining threads to finish before it fully ends, else it stops any running threads abruptly.
 
 ### Multiple Threads
 1. How many threads are created in the program?
