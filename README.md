@@ -18,3 +18,38 @@ shared-resource management using Python.
 - Demonstrate concurrent execution.
 - Explain thread coordination.
 - Apply locks to protect shared resources.
+
+## Guide Questions
+### Single Thread
+1. What is the purpose of threading.Thread()?
+2. What happens when start() is executed?
+3. What is the purpose of join()?
+4. What happens if join() is removed?
+
+### Multiple Threads
+1. How many threads are created in the program?
+2. Do the two threads execute independently?
+3. Why might the output order change when the program is executed again?
+4. What is the difference between sequential and concurrent execution?
+
+### Thread Synchronization
+1. Why does the main program wait when join() is used?
+2. What happens when join() is removed?
+3. In what situations is thread synchronization necessary?
+
+### Thread Lock
+1. What is a shared resource?
+2. What is a race condition?
+3. What is the purpose of threading.Lock()?
+4. What is a critical section?
+5. Why is synchronization important when multiple threads access shared data?
+
+### General Questions
+1. What is the difference between a process and a thread?
+2. What are the advantages of using multithreading?
+3. How does multithreading improve application responsiveness?
+4. What is the difference between concurrency and parallelism?
+5. Why is a lock necessary when multiple threads access shared data?
+6. What might happen if a thread is not properly synchronized?
+7. Can multiple threads execute simultaneously on a single-core processor? Explain.
+8. How does the operating system manage kernel-level threads?
