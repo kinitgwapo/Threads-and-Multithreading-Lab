@@ -86,6 +86,15 @@ shared-resource management using Python.
     - In terms of computer algorithms, concurrency is defined as tasks being executed in an overlapped time from a single core, acting as multiple tasks being run simultaneously by switching quickly. While parallelism is when tasks are truly run simultaneously by assigning tasks to different cores instead of a single core running both tasks.
 
 5. Why is a lock necessary when multiple threads access shared data?
+    - Threads share memory. Without a lock, two threads can read and change the same data at the same time, and the result becomes wrong. A lock lets only one thread use the data at a time.
+
 6. What might happen if a thread is not properly synchronized?
+    - A race condition can happen. Threads overwrite each other's changes, so data gets corrupted or updates are lost. It can also cause crashes, wrong results, or a deadlock (threads wait for each other forever).
+
 7. Can multiple threads execute simultaneously on a single-core processor? Explain.
+    - No, not purely instant. A single core can run only one thread at a time. The operating system switches between threads very fast (time slicing), so they look like the run together. This is concurrency, not true parallelism.
+
 8. How does the operating system manage kernel-level threads?
+    - The kernel knows about each thread and schedules it directly. It keeps a record for each thread (registers, stack, state). It decides which thread runs on which core, saves and loads the thread's state during a context switch, and moves threads between states: ready, running, and waiting. If one thread blocks, the kernel can run another thread of the same process.
+
+## Image(s)
